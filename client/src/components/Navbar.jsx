@@ -15,7 +15,9 @@ export const Navbar = () => {
 
   const logout = () => {
     setCookies("access_token", "");
+    var ediary_data = window.localStorage.getItem("e-diary-data");
     window.localStorage.clear();
+    window.localStorage.setItem("e-diary-data", ediary_data);
     navigate("/");
   };
 
